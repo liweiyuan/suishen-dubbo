@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="suishen-dubbo-provider" />
+        <module name="suishen-dubbo-filter" />
+        <module name="suishen-dubbo-common" />
+        <module name="suishen-dubbo-consumer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="suishen-dubbo-common" options="-parameters" />
+      <module name="suishen-dubbo-consumer" options="-parameters" />
+      <module name="suishen-dubbo-filter" options="-parameters" />
+      <module name="suishen-dubbo-provider" options="-parameters" />
+    </option>
+  </component>
+</project>
