@@ -15,7 +15,7 @@ import java.util.Map;
  * @description
  * @date 2019/7/10
  */
-@Activate(group = {Constants.CONSUMER}, order = -1)
+@Activate(group = {Constants.CONSUMER}, order = -2)
 public class JarVersionAttachFilter implements Filter {
 
     private LoadingCache<Class<?>, String> versionMapping = CacheBuilder.newBuilder().maximumSize(1024).build(new CacheLoader<Class<?>, String>() {
@@ -32,6 +32,8 @@ public class JarVersionAttachFilter implements Filter {
         if (StringUtils.hasText(version)) {
             attachments.put("version", version);
         }
+
+        invoker.getUrl().addParameterIfAbsent("jar","version");
         return invoker.invoke(invocation);
     }
 }

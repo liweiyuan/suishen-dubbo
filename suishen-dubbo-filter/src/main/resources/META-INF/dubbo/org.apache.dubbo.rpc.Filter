@@ -1,2 +1,4 @@
 dubboTracerFilter=suishen.dubbo.filter.DubboTracerFilter
 jarattach=suishen.dubbo.filter.JarVersionAttachFilter
+providerFilter=suishen.dubbo.filter.DubboProviderFilter
+callTracerFilter=suishen.dubbo.filter.CallTraceFilter
